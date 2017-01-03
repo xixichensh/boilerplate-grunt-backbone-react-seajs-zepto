@@ -21,7 +21,7 @@ define(function(require,exports, module) {
             return (
                 <section>
                     
-                    sadadasda
+                    Hello World
 					
                 </section>
             );
