@@ -1,0 +1,338 @@
+/* 默认的loading样式 */
+#_loadingMaskUI_ {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: none;}
+
+#_loadingMaskUI_ .inner {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#_loadingMaskUI_ .inner ._maskload_ {
+    height: 92px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.85);
+    padding: 20px 0 8px 0;
+    margin: -90px 0 0 -45px;
+    border-radius: 5px;
+}
+
+#_loadingMaskUI_ .inner ._maskload_ .loading { margin: 0 auto 10px auto;}
+
+#_loadingMaskUI_ .inner ._maskload_ span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+}
+
+#_loadingMaskUI_ .inner ._maskerror_ {
+    height: 72px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.85);
+    padding: 20px 0 8px 0;
+    margin: -90px 0 0 -45px;
+    border-radius: 5px;
+}
+
+#_loadingMaskUI_ .inner ._maskerror_ span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+}
+
+
+/*cfxixi code 20130620 弹出框的样式*/
+.loginMasker,
+.confirmMasker,
+.alertMasker {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 99998;
+    display: none;
+}
+
+
+
+.loginMasker>div .login,
+.confirmMasker>div .confirm,
+.alertMasker>div .alert {
+    display: table-row !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.loginMasker>div .login .inner{
+    width: 270px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -90px 0 0 -140px;
+}
+
+.confirmMasker>div .confirm .inner,
+.alertMasker>div .alert .inner {
+    width:305px;
+    background: #fff;
+    border-radius:14px;
+    overflow:hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding-top: 12px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.alertMasker>div .alert .inner p.smallFont{
+    font-size: 14px;
+}
+.alertMasker>div .alert .inner p.smallUrl{
+    font-size: 14px;
+    padding: 0 10px;
+    padding-bottom: 8px;
+    overflow: hidden;
+    word-break:break-all;
+}
+.loginMasker>div .login h2{
+    box-sizing: content-box;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    color: #000000;
+    padding-top: 10px;
+}
+
+.confirmMasker>div .confirm h2,
+.alertMasker>div .alert h2 {
+    box-sizing: content-box;
+    font-size:19px;
+    font-weight:normal;
+    text-align:center;
+    height:28px;
+    line-height:28px;
+    /*text-shadow:0 -1px 0 rgba(0,0,0,0.8);*/
+    color:#000000;
+    padding-top:5px
+}
+
+.loginMasker>div .login p,
+.confirmMasker>div .confirm p,
+.alertMasker>div .alert p {
+    color: #000000;
+    padding:8px 0;
+    font-size:16px;
+    text-align:center;
+    font-weight:normal
+}
+
+
+
+
+@-webkit-keyframes showalert {
+    0% {
+        -webkit-transform:scale3d(0.95,0.95,0.95);
+        -ms-transform:scale3d(0.95,0.95,0.95);
+        -o-transform:scale3d(0.95,0.95,0.95);
+        -moz-transform:scale3d(0.95,0.95,0.95);
+        transform:scale3d(0.95,0.95,0.95);
+    }
+    33% {
+        -webkit-transform:scale3d(1.15,1.15,1.15);
+        -ms-transform:scale3d(1.15,1.15,1.15);
+        -o-transform:scale3d(1.15,1.15,1.15);
+        -moz-transform:scale3d(1.15,1.15,1.15);
+        transform:scale3d(1.15,1.15,1.15);
+    }
+    66% {
+        -webkit-transform:scale3d(0.86,0.86,0.86);
+        -ms-transform:scale3d(0.86,0.86,0.86);
+        -o-transform:scale3d(0.86,0.86,0.86);
+        -moz-transform:scale3d(0.86,0.86,0.86);
+        transform:scale3d(0.86,0.86,0.86);
+    }
+    100% {
+        -webkit-transform:scale3d(1,1,1);
+        -ms-transform:scale3d(1,1,1);
+        -o-transform:scale3d(1,1,1);
+        -moz-transform:scale3d(1,1,1);
+        transform:scale3d(1,1,1);
+    }
+}
+
+.loginMasker footer,
+.confirmMasker footer,
+.alertMasker footer {
+    display: -webkit-box;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+.loginMasker footer>a:only-child,.alertMasker footer>a:only-child
+{
+    width: 100%;
+}
+.loginMasker footer>.button,
+.confirmMasker footer>.button,
+.alertMasker footer>.button {
+    display: block;
+
+
+    height: 100%;
+    line-height: 30pt;
+    width: 50%;
+    border-top: solid 1px #b5b5b5;
+    color: #2d2d2d;
+}
+
+.loginMasker a.button{
+    line-height: 44px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13pt;
+    -webkit-transition: all .35s ease-out;
+    -ms-transition: all .35s ease-out;
+    -o-transition: all .35s ease-out;
+    -moz-transition: all .35s ease-out;
+    transition: all .35s ease-out;
+    display: block;
+    -webkit-box-sizing: auto;
+    -ms-box-sizing: auto;
+    -o-box-sizing: auto;
+    -moz-box-sizing: auto;
+    box-sizing: auto;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    text-align: center;
+    color: #0066bb;
+    border-color: #ccc;
+    background-color: rgba(255,255,255,.01);
+}
+
+.confirmMasker a.button,
+.alertMasker a.button {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 17px;
+
+    -webkit-transition: all .35s ease-out;
+    -ms-transition: all .35s ease-out;
+    -o-transition: all .35s ease-out;
+    -moz-transition: all .35s ease-out;
+    transition: all .35s ease-out;
+
+    display: block;
+
+    -webkit-box-sizing: auto;
+    -ms-box-sizing: auto;
+    -o-box-sizing: auto;
+    -moz-box-sizing: auto;
+    box-sizing: auto;
+
+    padding: 8px 0;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    text-align: center;
+    color: #007aff;
+    border-color: #bfbfc9;
+    background-color: rgba(255,255,255,.01);
+}
+.confirmMasker a#confirmCon{
+    color: #333333;
+}
+.confirmMasker a#confirmCancel{
+    color: #007aff;
+}
+
+
+
+
+
+
+
+body {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
+
+    -webkit-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+div[data-pid] {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+.dnone{
+    display: none !important;
+}
+
+.layoutH {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    width: 100%;
+
+    display: -ms-flexbox;
+    -ms-flex-direction:row;
+    -ms-flex-pack:center;
+}
+

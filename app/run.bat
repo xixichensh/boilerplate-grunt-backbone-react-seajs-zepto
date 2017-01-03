@@ -1,0 +1,1 @@
+jsx -w -x jsx vendor/ vendor_build

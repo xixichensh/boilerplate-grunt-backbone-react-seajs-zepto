@@ -1,0 +1,301 @@
+/* 默认的loading样式 */
+#_loadingMaskUI_ {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: none;
+}
+
+
+#_loadingMaskUI_ .inner {
+    display: table-row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+/**
+ * loading
+ */
+.loadWrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: none;
+    background: none;
+}
+.loadWrap.loadShow{
+    display: block;
+}
+.loadWrap>.loadInner{
+    width: 90px;
+    height: 110px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.7);
+
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.loadWrap>.loadInner>.loadIcon{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin: 20px auto 10px;
+}
+.loadWrap>.loadInner>.loadIcon>span{
+    position: absolute;
+    color: #fff;
+    display: block;
+}
+.loadWrap>.loadInner>.loadIcon>span.load_circle,
+.loadWrap>.loadInner>.loadIcon>span.load_circle:before{
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    border-top-color: transparent;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.loadWrap>.loadInner>.loadIcon>span.load_circle:before{
+    content: " ";
+    top: -1px;
+    left: -1px;
+    display: block;
+    position: absolute;
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+.loadWrap>.loadInner>.loadIcon>span.icon-iconlogo01{
+    top: 6px;
+    left: 6px;
+    font-size: 19px;
+}
+.loadWrap>.loadInner .icon_logo:before{
+    font-size: 20px;
+}
+.loadWrap>.loadInner>.loadContent{
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.popLoadMore.loading .pullUptoRefresh{
+    display: block;
+}
+.popLoadMore.loading  .triggerTips {
+    display: none;
+}
+.pullUptoRefresh{
+    position: relative;
+    width: 140px;
+    margin: 0 auto;
+    display: none;
+}
+.pullUptoRefresh p{
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+.pullUptoRefresh>div.loadIcon{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+}
+.pullUptoRefresh>div.loadIcon>span{
+    position: absolute;
+    color: #999;
+    display: block;
+    top: -10px;
+    left: 4px;
+}
+.pullUptoRefresh>div.loadIcon>span.load_circle,
+.pullUptoRefresh>div.loadIcon>span.load_circle:before{
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    border-top-color: transparent;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+
+}
+
+.pullUptoRefresh>div.loadIcon>span.load_circle:before{
+    content: " ";
+    top: -1px;
+    left: -1px;
+    display: block;
+    position: absolute;
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+.pullUptoRefresh>div.loadIcon>span.icon_logo{
+    top: 0px;
+    left: 4px;
+}
+.pullUptoRefresh>div.icon_logo:before{
+    font-size: 20px;
+}
+
+
+
+.loadAnimateInfinite{
+    -webkit-animation: load 1s infinite linear;
+    animation: load 1s infinite linear;
+}
+
+/** 网络不给力及无数据提示 **/
+.hasScroll {
+    position: relative;
+}
+.hungryTips {
+    text-align: center;
+    position: relative;
+    top:50%;
+    margin-top: -20px;
+}
+.noWifi {
+    text-align: center;
+    position: relative;
+    top:50%;
+    margin-top: -93px;
+}
+.errorIcon {
+    font-size: 110px;
+    color: #e3e2e7;
+}
+.noWifi p {
+    color: #999;
+    font-size: 16px;
+    padding-top: 4px;
+}
+
+
+.telLayer,.closeTelLayer {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.filterMore {
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+    display: none;
+}
+.telLayer {
+    display: none;
+    z-index: 9999;
+    background: rgba(0,0,0,0.8);
+}
+.telLayerMain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f6f5fa;
+    text-align: center;
+}
+.telLayerMain dt {
+    font-size: 12px;
+    height: 55px;
+    box-sizing: border-box;
+    padding:10px 0;
+}
+.telLayerMain dt,.telLayerMain dd{
+    border-bottom: 1px solid #e3e2e7;
+    background: #fff;
+}
+.telLayerMain dd a,.telLayerCancel {
+    line-height: 42px;
+    height: 42px;
+    color: #000;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+.telLayerCancel {
+    background: #fff;
+    margin-top: 6px;
+    border-top: 1px solid #e3e2e7;
+}
+.filterCont {
+    background: #f5f5f9;
+}
+.dTitle {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #666;
+    background: #f5f5f9;
+    padding-left: 5%;
+}
+
+.fixedCharge {
+    height: 22px;
+    line-height: 20px;
+    color: #fff;
+    background:rgba(0,0,0,0.5);
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 48px;
+    text-align: center;
+    font-size: 12px;
+}
+.fixName {
+    float: right;
+    margin-right: 2%;
+}
+.lognPNG{
+    width: 20px;
+    display: inline-block;
+    padding-left: 6px;
+    padding-top: 6px;
+}
+
+
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

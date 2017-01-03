@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用手机号码链接(for iPhone)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <!--自适应设备宽度-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--控制全屏时顶部状态栏的外，默认白色-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--是否允许全屏显，只有在桌面启动时可用-->
+    <title>项目名称</title>
+
+    <link href="./resources/css/indexInit.css" rel="stylesheet" type="text/css">
+
+    <script src="./libs/loadingmask.js"></script>
+    <script src="./libs/sea.js"></script>
+    <script src="./libs/seajs-preload.js"></script>
+    <script src="./libs/seajs-text.js"></script>
+
+</head>
+<body>
+
+    <div id="indexView" data-pid="root/1">
+
+        <header class="navbar">
+
+            <div class="navbar-inner">
+
+                <div class="button menu-btn">
+                    <p class="button-inner">
+                        <i class="iconfont">&#xe60e;</i>
+                    </p>
+                </div>
+
+                <h1><span>首页名称</span></h1>
+
+            </div>
+
+        </header>
+
+        <div class="iscroll-box">
+            <div class="content">
+                Hello World
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        seajs.config({
+            base: "./",
+            alias: {
+                'zepto':                'libs/zepto',
+                'backbone':             'libs/backbone',
+                'underscore':           'libs/underscore',
+                'react':                'libs/react',
+                'react-dom':            'libs/react-dom',
+                'viewhelper':           'plugins/viewhelper',
+                'common':               'plugins/common',
+                'core':                 'plugins/core',
+                'routerhelper':         'plugins/routerhelper'
+            },
+
+            map:[
+                [".js",".js?v=20160704"]
+            ],
+
+            preload: ['zepto','underscore']
+        });
+
+        seajs.use("./index");
+
+    </script>
+
+    <script src="./debug/vconsole.min.js"></script>
+    <script src="./debug/vconsole-resources.min.js"></script>
+    <script src="./debug/vconsole-elements.min.js"></script>
+    <script src="./debug/vconsole-sources.min.js"></script>
+
+
+</body>
+</html>
